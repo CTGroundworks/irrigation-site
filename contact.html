@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Central Texas Groundworks & Consulting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Simple contact form styling */
+    .contact-section {
+      margin-bottom: 2rem;
+    }
+    .contact-details {
+      margin-bottom: 1.5rem;
+    }
+    .contact-details p {
+      margin: 0.3rem 0;
+    }
+    .contact-form {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .contact-form button {
+      margin-top: 12px;
+      padding: 10px 20px;
+      background-color: #0a6fb5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #084e7e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>Get in touch for quotes, questions or partnerships</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="knowledge.html">Knowledge Center</a></li>
+      <li><a href="calculator.html">Run Time Calculator</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="contact-section">
+      <h2>Our Contact Information</h2>
+      <div class="contact-details">
+        <p><strong>Phone:</strong> (555) 555-5555</p>
+        <p><strong>Email:</strong> <a href="mailto:info@ctgroundworks.com">info@ctgroundworks.com</a></p>
+        <p><strong>Address:</strong> Central Texas Groundworks & Consulting, Austin, TX</p>
+      </div>
+      <p>If you have questions about our services, need a quote or simply want to chat about your irrigation project, please reach out using the details above or send us a message using the form below.</p>
+    </section>
+    <section class="contact-section">
+      <h2>Send Us a Message</h2>
+      <form class="contact-form" action="mailto:info@ctgroundworks.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Connect with us:</p>
+    <div class="social-links">
+      <a href="https://x.com/yourhandle" target="_blank">X (Twitter)</a>
+      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; <span id="year"></span> Central Texas Groundworks & Consulting LLC</p>
+  </footer>
+  <script>
+    // Set current year automatically in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
