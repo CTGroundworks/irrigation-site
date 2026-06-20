@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps & Resources</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Apps & Resources</h1>
+    <p>Access our applications, videos and AI demos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#downloads">Downloads</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#huggingface">AI Demo</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="downloads">
+      <h2>Download Our Apps</h2>
+      <p>Select an app to download the latest APK:</p>
+      <ul>
+        <!-- Replace the href links below with the share links to your APK files -->
+        <li><a href="https://drive.google.com/file/d/EXAMPLE_FILE_ID_1/view?usp=sharing" target="_blank">Example App 1 (APK)</a></li>
+        <li><a href="https://drive.google.com/file/d/EXAMPLE_FILE_ID_2/view?usp=sharing" target="_blank">Example App 2 (APK)</a></li>
+      </ul>
+    </section>
+
+    <section id="videos">
+      <h2>Featured Videos</h2>
+      <p>Watch some of our latest uploads:</p>
+      <div class="video-container">
+        <!-- Replace VIDEO_ID with your YouTube video ID -->
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section id="huggingface">
+      <h2>AI Demo</h2>
+      <p>Explore our AI demo hosted on Hugging Face.</p>
+      <!-- Replace the href with the link to your Hugging Face Space or model -->
+      <a class="cta-button" href="https://huggingface.co/spaces/USERNAME/SPACE_NAME" target="_blank">Open AI Demo</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Connect with us:</p>
+    <div class="social-links">
+      <!-- Replace with your actual social media handles/URLs -->
+      <a href="https://x.com/yourhandle" target="_blank">X (Twitter)</a>
+      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; <span id="year"></span> Central Texas Groundworks & Consulting</p>
+  </footer>
+
+  <script>
+    // Set current year automatically in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
