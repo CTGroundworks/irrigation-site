@@ -1,133 +1,133 @@
 /* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #333;
-  background: #f8f9fa;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #333;
+      background: #f8f9fa;
+    }
 
-header {
-  background: #0a6fb5;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
+    header {
+      background: #0a6fb5;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
 
-header p {
-  margin-top: 0.5rem;
-}
+    header p {
+      margin-top: 0.5rem;
+    }
 
-nav {
-  background: #ffffff;
-  border-bottom: 1px solid #e1e1e1;
-}
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e1e1e1;
+    }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-nav ul li {
-  margin: 0.5rem 1rem;
-}
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #0a6fb5;
-  font-weight: bold;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #0a6fb5;
+      font-weight: bold;
+    }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-main {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-section {
-  margin-bottom: 2rem;
-}
+    section {
+      margin-bottom: 2rem;
+    }
 
-/* Service cards */
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
+    /* Service cards */
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-.service-card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 1rem);
-  padding: 1rem;
-  box-sizing: border-box;
-  min-width: 250px;
-}
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(33% - 1rem);
+      padding: 1rem;
+      box-sizing: border-box;
+      min-width: 250px;
+    }
 
-.service-card h3 {
-  margin-top: 0;
-  color: #0a6fb5;
-}
+    .service-card h3 {
+      margin-top: 0;
+      color: #0a6fb5;
+    }
 
-/* Knowledge content styling */
-.knowledge-content h2,
-.knowledge-content h3 {
-  color: #0a6fb5;
-}
+    /* Knowledge content styling */
+    .knowledge-content h2,
+    .knowledge-content h3 {
+      color: #0a6fb5;
+    }
 
-.knowledge-content ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
+    .knowledge-content ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
 
-.knowledge-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
+    .knowledge-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
 
-.knowledge-content th,
-.knowledge-content td {
-  border: 1px solid #ddd;
-  padding: 0.5rem;
-  text-align: left;
-}
+    .knowledge-content th,
+    .knowledge-content td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
 
-.knowledge-content th {
-  background: #f0f8ff;
-}
+    .knowledge-content th {
+      background: #f0f8ff;
+    }
 
-/* Footer */
-footer {
-  background: #0a6fb5;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-}
+    /* Footer */
+    footer {
+      background: #0a6fb5;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
 
-footer .social-links a {
-  color: #ffffff;
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
+    footer .social-links a {
+      color: #ffffff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
 
-footer .social-links a:hover {
-  text-decoration: underline;
-}
+    footer .social-links a:hover {
+      text-decoration: underline;
+    }
