@@ -3,174 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Run Time Calculator – Central Texas Groundworks & Consulting</title>
+  <meta name="description" content="A simple irrigation cycle-and-soak runtime calculator for planning sprinkler run times.">
+  <title>Run Time Calculator | Central Texas Groundworks & Consulting</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Additional styling for calculators to complement the global styles */
-    .calculator-container {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #f9f9f9;
-    }
-    .calculator-container h3 {
-      margin-top: 0;
-      color: #0a6fb5;
-    }
-    .calculator-container label {
-      display: block;
-      margin-top: 10px;
-    }
-    .calculator-container select,
-    .calculator-container input {
-      width: 100%;
-      padding: 6px;
-      margin-top: 5px;
-      box-sizing: border-box;
-    }
-    .calculator-container button {
-      margin-top: 10px;
-      padding: 8px 12px;
-      background-color: #0a6fb5;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .calculator-container button:hover {
-      background-color: #084e7e;
-    }
-    .calculator-result {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Run Time Calculator</h1>
-    <p>Calculate irrigation run times based on your sprinkler type, soil and conditions</p>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span><strong>Central Texas Groundworks</strong><small>& Consulting LLC</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="knowledge.html">Field Notes</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-call" href="tel:+15127454602">Call Now</a>
   </header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="knowledge.html">Knowledge Center</a></li>
-      <li><a href="calculator.html">Run Time Calculator</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+
   <main>
-    <section>
-      <h2>Irrigation Run Time Calculators</h2>
-      <p>Use the calculators below to determine how long to run your irrigation zones.  The general calculator provides a quick estimate, while the enhanced calculator accounts for soil type and compaction to recommend cycle-and-soak times.</p>
+    <section class="page-hero">
+      <p class="eyebrow">Planning tool</p>
+      <h1>Simple irrigation run-time calculator.</h1>
+      <p>Use this as a rough planning tool. Actual schedules should account for soil, slope, pressure, nozzle type, sun exposure, and local watering rules.</p>
     </section>
-    <div class="calculator-container">
-      <h3>General Run Time Calculator</h3>
-      <label for="deviceType">Sprinkler type</label>
-      <select id="deviceType">
-        <option value="spray">Spray</option>
-        <option value="rotor">Rotor</option>
-        <option value="rotator">Rotator/Multi-stream</option>
-        <option value="drip">Drip (per emitter)</option>
-      </select>
-      <label for="desiredDepth">Desired water depth (inches)</label>
-      <input id="desiredDepth" type="number" min="0" step="0.1" value="0.5" />
-      <button type="button" onclick="calculateGeneral()">Calculate</button>
-      <p id="generalResult" class="calculator-result"></p>
-    </div>
-    <div class="calculator-container">
-      <h3>Enhanced Run Time Calculator</h3>
-      <label for="deviceTypeAdv">Sprinkler type</label>
-      <select id="deviceTypeAdv">
-        <option value="spray">Spray</option>
-        <option value="rotor">Rotor</option>
-        <option value="rotator">Rotator/Multi-stream</option>
-        <option value="drip">Drip (per emitter)</option>
-      </select>
-      <label for="soilType">Soil type</label>
-      <select id="soilType">
-        <option value="clay">Clay</option>
-        <option value="loam">Loam</option>
-        <option value="sandy">Sandy</option>
-      </select>
-      <label for="compacted">Soil condition</label>
-      <select id="compacted">
-        <option value="normal">Normal</option>
-        <option value="compacted">Compacted / Frequently traveled</option>
-      </select>
-      <label for="desiredDepthAdv">Desired water depth (inches)</label>
-      <input id="desiredDepthAdv" type="number" min="0" step="0.1" value="0.5" />
-      <button type="button" onclick="calculateEnhanced()">Calculate</button>
-      <p id="enhancedResult" class="calculator-result"></p>
-    </div>
+
+    <section class="split-section align-start">
+      <form class="contact-form calculator-form" id="calculator">
+        <label for="minutes">Total minutes needed for the zone</label>
+        <input id="minutes" type="number" min="1" value="24">
+
+        <label for="cycles">Number of cycles</label>
+        <input id="cycles" type="number" min="1" value="3">
+
+        <label for="soak">Minutes between cycles</label>
+        <input id="soak" type="number" min="0" value="30">
+
+        <button class="button primary full" type="submit">Calculate</button>
+      </form>
+      <div class="field-card" id="result">
+        <h2>Suggested setup</h2>
+        <p>Enter your target total run time and cycle count.</p>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>Connect with us:</p>
-    <div class="social-links">
-      <a href="https://x.com/yourhandle" target="_blank">X (Twitter)</a>
-      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
-    </div>
-    <p>&copy; <span id="year"></span> Central Texas Groundworks & Consulting LLC</p>
+
+  <footer class="site-footer">
+    <p>Central Texas Groundworks & Consulting LLC</p>
+    <p><a href="tel:+15127454602">(512) 745-4602</a> | <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
   </footer>
+
   <script>
-    // Typical precipitation rates (inches per hour) based on extension sources
-    const precipitationRates = {
-      spray: 1.5,    // spray heads apply between 1 and 2 inches/hr【82362044317349†L116-L118】
-      rotor: 0.5,    // rotary sprinklers apply 0.25 to 0.5 inches/hr【82362044317349†L116-L118】
-      rotator: 0.4, // multi-stream rotators typically apply less than rotors (approx. 0.4 in/hr)
-      drip: 0.5     // drip per emitter (approx. 0.5 in/hr; adjust based on emitter flow)
-    };
-    // Soil infiltration rates (inches per hour) based on soil type
-    // Clay: 0.10–0.25; Loam: 0.25–0.50; Sandy: 0.50–0.75【44887585242541†L229-L246】
-    const infiltrationRates = {
-      clay: 0.2,
-      loam: 0.4,
-      sandy: 0.6
-    };
-    function calculateGeneral() {
-      const device = document.getElementById('deviceType').value;
-      const depth = parseFloat(document.getElementById('desiredDepth').value);
-      const rate = precipitationRates[device];
-      if (!rate || !depth || depth <= 0) {
-        document.getElementById('generalResult').textContent = 'Please enter valid inputs.';
-        return;
-      }
-      // Total runtime in minutes to apply the desired depth
-      const totalMinutes = (depth / rate) * 60;
-      document.getElementById('generalResult').textContent =
-        `Run each zone for approximately ${totalMinutes.toFixed(1)} minutes to apply ${depth.toFixed(2)} inches of water.`;
+    const form = document.getElementById('calculator');
+    const result = document.getElementById('result');
+
+    function calculate(event) {
+      event.preventDefault();
+      const minutes = Math.max(1, Number(document.getElementById('minutes').value || 1));
+      const cycles = Math.max(1, Number(document.getElementById('cycles').value || 1));
+      const soak = Math.max(0, Number(document.getElementById('soak').value || 0));
+      const perCycle = Math.ceil(minutes / cycles);
+      const totalWindow = perCycle * cycles + soak * Math.max(0, cycles - 1);
+      result.innerHTML = `<h2>Suggested setup</h2><p>Run this zone for about <strong>${perCycle} minutes per cycle</strong>, repeated <strong>${cycles} times</strong>.</p><p>With ${soak} minutes of soak time between cycles, the full watering window is about <strong>${totalWindow} minutes</strong>.</p><p class="small-note">Use this as a planning estimate, then adjust based on runoff, soil moisture, and actual sprinkler coverage.</p>`;
     }
-    function calculateEnhanced() {
-      const device = document.getElementById('deviceTypeAdv').value;
-      const soil = document.getElementById('soilType').value;
-      const condition = document.getElementById('compacted').value;
-      const depth = parseFloat(document.getElementById('desiredDepthAdv').value);
-      const rate = precipitationRates[device];
-      let infiltration = infiltrationRates[soil];
-      if (!rate || !infiltration || !depth || depth <= 0) {
-        document.getElementById('enhancedResult').textContent = 'Please enter valid inputs.';
-        return;
-      }
-      // Reduce infiltration by 50% if soil is compacted or frequently traveled
-      if (condition === 'compacted') {
-        infiltration = infiltration * 0.5;
-      }
-      // Calculate total runtime (minutes)
-      const totalRuntime = (depth / rate) * 60;
-      // Maximum runtime per cycle without runoff
-      const cycleRuntime = (infiltration / rate) * 60;
-      // Determine number of cycles and adjust cycle runtime
-      const cycles = Math.max(1, Math.ceil(totalRuntime / cycleRuntime));
-      const adjustedCycleRuntime = totalRuntime / cycles;
-      document.getElementById('enhancedResult').textContent =
-        `Total runtime: ${totalRuntime.toFixed(1)} minutes. Run ${cycles} cycle${cycles > 1 ? 's' : ''} of approximately ${adjustedCycleRuntime.toFixed(1)} minutes each to allow soaking between cycles.`;
-    }
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+
+    form.addEventListener('submit', calculate);
+    calculate(new Event('submit'));
   </script>
 </body>
 </html>
