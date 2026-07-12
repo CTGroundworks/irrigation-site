@@ -2,29 +2,6 @@
   publish = "."
 
 [[redirects]]
-  from = "/run-time-calculator"
-  to = "/calculator.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/run-time-calculator/"
-  to = "/calculator.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/runtime-calculator"
-  to = "/calculator.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/calculator"
-  to = "/calculator.html"
-  status = 200
-
-[[redirects]]
   from = "/services"
   to = "/services.html"
   status = 200
@@ -55,6 +32,29 @@
   status = 200
 
 [[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/run-time-calculator"
+  to = "/resources.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/runtime-calculator"
+  to = "/resources.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calculator"
+  to = "/resources.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/packages"
   to = "/services.html"
   status = 301
@@ -68,12 +68,12 @@
 
 [[redirects]]
   from = "/testamonials"
-  to = "/about.html"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/testimonials"
-  to = "/about.html"
+  to = "/"
   status = 301
   force = true
