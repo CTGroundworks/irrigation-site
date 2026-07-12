@@ -1,0 +1,79 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/run-time-calculator"
+  to = "/calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/run-time-calculator/"
+  to = "/calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/runtime-calculator"
+  to = "/calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calculator"
+  to = "/calculator.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/knowledge"
+  to = "/knowledge.html"
+  status = 200
+
+[[redirects]]
+  from = "/field-notes"
+  to = "/knowledge.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources"
+  to = "/resources.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/packages"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/testamonials"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/testimonials"
+  to = "/about.html"
+  status = 301
+  force = true
