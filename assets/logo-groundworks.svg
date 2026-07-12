@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Central Texas Groundworks logo</title>
+  <desc id="desc">A round mark with Central Texas hills, water lines, soil layers, and a small tree.</desc>
+  <circle cx="80" cy="80" r="74" fill="#f8f4ea" stroke="#11263a" stroke-width="8"/>
+  <path d="M20 100 C42 84 55 92 72 78 C91 62 109 69 140 44 L140 126 L20 126 Z" fill="#65775b"/>
+  <path d="M21 116 C42 102 61 105 82 92 C101 81 119 82 139 66 L139 129 L21 129 Z" fill="#3f523a"/>
+  <path d="M28 124 C48 116 64 119 82 110 C102 99 119 101 132 91" fill="none" stroke="#c7a77a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 137 C48 130 64 132 82 125 C101 117 119 117 134 108" fill="none" stroke="#11263a" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  <path d="M74 28 L74 78" stroke="#11263a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M74 48 C58 37 56 25 72 18 C86 25 86 39 74 48 Z" fill="#3f523a"/>
+  <path d="M76 53 C95 41 101 28 86 18 C72 29 70 42 76 53 Z" fill="#65775b"/>
+  <path d="M74 67 C59 60 50 67 48 80 C64 84 73 78 74 67 Z" fill="#65775b"/>
+  <path d="M76 69 C91 58 104 62 111 75 C95 82 84 80 76 69 Z" fill="#3f523a"/>
+</svg>

@@ -24,7 +24,7 @@
       return [
         '<figure class="gallery-item">',
         '<img src="' + image.src + '" alt="' + image.alt + '" loading="lazy">',
-        '<figcaption><strong>' + image.title + '</strong>' + image.caption + '</figcaption>',
+        '<figcaption><strong>' + image.title + '</strong><span>' + image.caption + '</span></figcaption>',
         '</figure>'
       ].join("");
     }).join("");
