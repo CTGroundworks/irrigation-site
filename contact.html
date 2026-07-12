@@ -3,80 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Call, text photos, or schedule an irrigation review with Central Texas Groundworks & Consulting LLC in Leander, Texas.">
-  <title>Contact | Central Texas Groundworks & Consulting</title>
+  <meta name="description" content="Request a quote from Central Texas Groundworks & Consulting LLC for landscape planning, drainage, site assessment, sod, planting, cleanup, water-management guidance, or pressure washing.">
+  <meta property="og:title" content="Request a Quote | Central Texas Groundworks & Consulting">
+  <meta property="og:description" content="Tell us about your Central Texas property and the problem you are trying to solve.">
+  <title>Request a Quote | Central Texas Groundworks & Consulting</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span><strong>Central Texas Groundworks</strong><small>& Consulting LLC</small></span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="knowledge.html">Field Notes</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+    <a class="brand" href="/"><span class="brand-mark">CT</span><span><strong>Central Texas Groundworks</strong><small>& Consulting LLC</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/#process">Process</a>
+      <a href="/#service-area">Service Area</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
-    <a class="header-call" href="tel:+15127454602">Call Now</a>
   </header>
-
-  <main>
+  <main id="main">
     <section class="page-hero">
       <p class="eyebrow">Contact</p>
-      <h1>Call, text photos, or schedule a review.</h1>
-      <p>Photos of dry spots, runoff, sprinkler heads, controller screens, wet areas, or problem zones can help start the conversation.</p>
-      <div class="button-row">
-        <a class="button primary" href="tel:+15127454602">Call Now</a>
-        <a class="button secondary" href="sms:+15127454602">Text Photos</a>
-      </div>
+      <h1>Request a Quote</h1>
+      <p>Tell us about your property, your goals, and the problems you are trying to solve. We will review the information and follow up about the next step.</p>
     </section>
-
-    <section class="split-section align-start">
-      <div class="contact-details">
+    <section class="quote-section standalone">
+      <div class="quote-copy">
         <h2>Central Texas Groundworks & Consulting LLC</h2>
-        <p><strong>Phone or text:</strong> <a href="tel:+15127454602">(512) 745-4602</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+15127454602">(512) 745-4602</a></p>
         <p><strong>Email:</strong> <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
         <p><strong>Based in:</strong> Leander, Texas</p>
-        <p><strong>Service area:</strong> Leander, Liberty Hill, Cedar Park, Georgetown, Round Rock, Lago Vista, Lakeway, Bee Cave, and nearby Central Texas communities.</p>
+        <p><strong>Service area:</strong> Leander, Cedar Park, Liberty Hill, Georgetown, Lago Vista, and surrounding Central Texas communities.</p>
       </div>
-
-      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+      <form class="quote-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
         <input type="hidden" name="form-name" value="contact">
-        <p class="hidden">
-          <label>Do not fill this out: <input name="bot-field"></label>
-        </p>
-
+        <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
-
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel">
-
         <label for="email">Email</label>
         <input id="email" name="email" type="email" autocomplete="email" required>
-
-        <label for="service">What do you need help with?</label>
-        <select id="service" name="service">
-          <option value="Irrigation system review">Irrigation system review</option>
-          <option value="Controller programming">Controller programming</option>
-          <option value="Dry spots or runoff">Dry spots or runoff</option>
-          <option value="Drainage or water movement">Drainage or water movement</option>
-          <option value="Water-efficiency recommendations">Water-efficiency recommendations</option>
-          <option value="Second opinion">Second opinion</option>
-          <option value="Other">Other</option>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option>Landscape Planning & Property Evaluation</option>
+          <option>Drainage & Runoff Assessment</option>
+          <option>Irrigation Review</option>
+          <option>Sod Installation & Lawn Renovation</option>
+          <option>Plant & Landscape-Bed Installation</option>
+          <option>Property Cleanup & Site Preparation</option>
+          <option>Water-Management Guidance</option>
+          <option>Pressure Washing</option>
+          <option>Other</option>
         </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button class="button primary full" type="submit">Send Request</button>
+        <label for="location">Property Location</label>
+        <input id="location" name="location" type="text" autocomplete="address-level2" required>
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" rows="5" required></textarea>
+        <button class="button primary full" type="submit">Request a Quote</button>
       </form>
     </section>
   </main>
-
   <footer class="site-footer">
-    <p>Central Texas Groundworks & Consulting LLC</p>
-    <p><a href="tel:+15127454602">(512) 745-4602</a> | <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
+    <div><strong>Central Texas Groundworks & Consulting LLC</strong><p>Landscape, drainage, irrigation-review, site-assessment, and property-improvement services for Central Texas.</p></div>
+    <div><p><a href="tel:+15127454602">(512) 745-4602</a></p><p><a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p><p>Leander, Texas</p></div>
   </footer>
+  <script src="site.js"></script>
 </body>
 </html>
