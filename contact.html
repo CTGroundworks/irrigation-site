@@ -3,101 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us – Central Texas Groundworks & Consulting</title>
+  <meta name="description" content="Call, text photos, or schedule an irrigation review with Central Texas Groundworks & Consulting LLC in Leander, Texas.">
+  <title>Contact | Central Texas Groundworks & Consulting</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Simple contact form styling */
-    .contact-section {
-      margin-bottom: 2rem;
-    }
-    .contact-details {
-      margin-bottom: 1.5rem;
-    }
-    .contact-details p {
-      margin: 0.3rem 0;
-    }
-    .contact-form {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      max-width: 600px;
-    }
-    .contact-form label {
-      display: block;
-      margin-top: 10px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
-    }
-    .contact-form button {
-      margin-top: 12px;
-      padding: 10px 20px;
-      background-color: #0a6fb5;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .contact-form button:hover {
-      background-color: #084e7e;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <p>Get in touch for quotes, questions or partnerships</p>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span><strong>Central Texas Groundworks</strong><small>& Consulting LLC</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="knowledge.html">Field Notes</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-call" href="tel:+15127454602">Call Now</a>
   </header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="knowledge.html">Knowledge Center</a></li>
-      <li><a href="calculator.html">Run Time Calculator</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+
   <main>
-    <section class="contact-section">
-      <h2>Our Contact Information</h2>
-      <div class="contact-details">
-        <p><strong>Phone:</strong> (555) 555-5555</p>
-        <p><strong>Email:</strong> <a href="mailto:info@ctgroundworks.com">info@ctgroundworks.com</a></p>
-        <p><strong>Address:</strong> Central Texas Groundworks & Consulting, Austin, TX</p>
+    <section class="page-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Call, text photos, or schedule a review.</h1>
+      <p>Photos of dry spots, runoff, sprinkler heads, controller screens, wet areas, or problem zones can help start the conversation.</p>
+      <div class="button-row">
+        <a class="button primary" href="tel:+15127454602">Call Now</a>
+        <a class="button secondary" href="sms:+15127454602">Text Photos</a>
       </div>
-      <p>If you have questions about our services, need a quote or simply want to chat about your irrigation project, please reach out using the details above or send us a message using the form below.</p>
     </section>
-    <section class="contact-section">
-      <h2>Send Us a Message</h2>
-      <form class="contact-form" action="mailto:info@ctgroundworks.com" method="post" enctype="text/plain">
+
+    <section class="split-section align-start">
+      <div class="contact-details">
+        <h2>Central Texas Groundworks & Consulting LLC</h2>
+        <p><strong>Phone or text:</strong> <a href="tel:+15127454602">(512) 745-4602</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
+        <p><strong>Based in:</strong> Leander, Texas</p>
+        <p><strong>Service area:</strong> Leander, Liberty Hill, Cedar Park, Georgetown, Round Rock, Lago Vista, Lakeway, Bee Cave, and nearby Central Texas communities.</p>
+      </div>
+
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden">
+          <label>Do not fill this out: <input name="bot-field"></label>
+        </p>
+
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="service">What do you need help with?</label>
+        <select id="service" name="service">
+          <option value="Irrigation system review">Irrigation system review</option>
+          <option value="Controller programming">Controller programming</option>
+          <option value="Dry spots or runoff">Dry spots or runoff</option>
+          <option value="Drainage or water movement">Drainage or water movement</option>
+          <option value="Water-efficiency recommendations">Water-efficiency recommendations</option>
+          <option value="Second opinion">Second opinion</option>
+          <option value="Other">Other</option>
+        </select>
+
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+
+        <button class="button primary full" type="submit">Send Request</button>
       </form>
     </section>
   </main>
-  <footer>
-    <p>Connect with us:</p>
-    <div class="social-links">
-      <a href="https://x.com/yourhandle" target="_blank">X (Twitter)</a>
-      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
-    </div>
-    <p>&copy; <span id="year"></span> Central Texas Groundworks & Consulting LLC</p>
+
+  <footer class="site-footer">
+    <p>Central Texas Groundworks & Consulting LLC</p>
+    <p><a href="tel:+15127454602">(512) 745-4602</a> | <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
   </footer>
-  <script>
-    // Set current year automatically in the footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
