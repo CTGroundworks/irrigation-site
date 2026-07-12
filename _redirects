@@ -1,11 +1,4 @@
-# Cloudflare Pages redirects and clean URL rewrites
-/services /services.html 200
-/about /about.html 200
-/knowledge /knowledge.html 200
-/resources /resources.html 200
-/contact /contact.html 200
-/thank-you /thank-you.html 200
-/calculator /calculator.html 200
+# Cloudflare Pages legacy redirects
 /run-time-calculator /calculator.html 301
 /testamonials / 301
 /testimonials / 301
