@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Central Texas property landscape illustration</title>
+  <desc id="desc">A stylized Central Texas residential property with lawn, limestone, planting beds, slope, and drainage contours.</desc>
+  <rect width="1200" height="900" fill="#17314a"/>
+  <path d="M0 180 C170 120 260 260 430 190 S730 120 900 220 1080 290 1200 210 V0 H0 Z" fill="#f6f1e7" opacity=".95"/>
+  <path d="M0 615 C170 500 330 590 500 515 S800 430 980 520 1120 585 1200 540 V900 H0 Z" fill="#65775b"/>
+  <path d="M0 720 C220 690 360 760 560 715 S900 620 1200 700 V900 H0 Z" fill="#3f523a"/>
+  <path d="M105 585 C245 520 325 625 465 570 S715 455 895 560 1070 610 1155 560" fill="none" stroke="#c7a77a" stroke-width="22" stroke-linecap="round"/>
+  <path d="M170 635 C285 600 345 660 470 630 S675 565 800 635" fill="none" stroke="#e7dfd0" stroke-width="12" stroke-linecap="round"/>
+  <rect x="700" y="252" width="280" height="190" rx="12" fill="#f2eadc"/>
+  <path d="M675 262 L842 135 L1008 262 Z" fill="#9e6f3d"/>
+  <rect x="745" y="326" width="78" height="116" fill="#17314a" opacity=".72"/>
+  <rect x="850" y="324" width="72" height="58" fill="#83a4b7"/>
+  <circle cx="265" cy="470" r="46" fill="#c7a77a"/>
+  <circle cx="325" cy="440" r="38" fill="#e7dfd0"/>
+  <circle cx="385" cy="470" r="44" fill="#c7a77a"/>
+  <path d="M55 280 C200 255 260 315 395 290 S665 235 790 290 1000 360 1150 300" fill="none" stroke="#17314a" stroke-width="4" opacity=".24"/>
+  <path d="M30 340 C200 315 280 380 430 350 S705 300 855 370 1040 420 1180 365" fill="none" stroke="#17314a" stroke-width="4" opacity=".18"/>
+  <path d="M70 400 C230 370 320 440 470 410 S735 360 890 430 1050 470 1180 430" fill="none" stroke="#17314a" stroke-width="4" opacity=".16"/>
+</svg>
