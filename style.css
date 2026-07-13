@@ -995,6 +995,13 @@ p {
   resize: vertical;
 }
 
+.field-help {
+  margin: -2px 0 4px;
+  color: #44534f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .form-fieldset {
   display: grid;
   gap: 10px;

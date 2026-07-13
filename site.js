@@ -60,7 +60,8 @@
         timeframe: "Desired timeframe",
         access: "Access limitations",
         hauling: "Hauling or disposal needed",
-        "preferred-contact": "Preferred contact method"
+        "preferred-contact": "Preferred contact method",
+        photos: "Selected photo files"
       };
 
       var lines = ["New project details from groundworkstx.com", ""];
@@ -69,7 +70,18 @@
         var values = formData.getAll(key).filter(Boolean);
 
         if (values.length) {
-          lines.push(labels[key] + ": " + values.join(", "));
+          var renderedValues = values.map(function (value) {
+            if (value && typeof value === "object" && value.name) {
+              return value.name;
+            }
+            return String(value);
+          }).filter(function (value) {
+            return value && value !== "[object File]";
+          });
+
+          if (renderedValues.length) {
+            lines.push(labels[key] + ": " + renderedValues.join(", "));
+          }
         }
       });
 
