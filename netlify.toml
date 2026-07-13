@@ -67,12 +67,6 @@
   force = true
 
 [[redirects]]
-  from = "/testamonials"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/testimonials"
   to = "/"
   status = 301

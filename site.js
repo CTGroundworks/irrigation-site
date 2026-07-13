@@ -54,16 +54,16 @@
         email: "Email",
         phone: "Phone",
         service: "Service needed",
-        location: "Property location",
+        location: "Property city or area",
+        details: "Project description",
         "project-size": "Approximate project size",
         timeframe: "Desired timeframe",
-        access: "Access conditions",
+        access: "Access limitations",
         hauling: "Hauling or disposal needed",
-        "preferred-contact": "Preferred contact method",
-        details: "Project details"
+        "preferred-contact": "Preferred contact method"
       };
 
-      var lines = ["New property inquiry from groundworkstx.com", ""];
+      var lines = ["New project details from groundworkstx.com", ""];
 
       Object.keys(labels).forEach(function (key) {
         var values = formData.getAll(key).filter(Boolean);
@@ -74,9 +74,9 @@
       });
 
       lines.push("");
-      lines.push("Note: Please attach photos of the property, access points, slopes, drains, standing water, turf, beds, or cleanup area if available.");
+      lines.push("Note: Photo uploads are not included in this email fallback. Please attach or text photos of the property, access points, slopes, drains, standing water, turf, beds, or cleanup area if available.");
 
-      var subject = encodeURIComponent("Groundworks property inquiry");
+      var subject = encodeURIComponent("Groundworks project details");
       var body = encodeURIComponent(lines.join("\n"));
       var status = form.querySelector(".form-status");
 
@@ -86,7 +86,7 @@
         form.appendChild(status);
       }
 
-      status.textContent = "Your email app should open with these project details. You can also call or text photos to (512) 745-4602.";
+      status.textContent = "Thank you. Your project details are ready to send. Your email app should open now; you can also call or text photos to (512) 745-4602.";
       window.location.href = "mailto:contact@groundworkstx.com?subject=" + subject + "&body=" + body;
     });
   });
