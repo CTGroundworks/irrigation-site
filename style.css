@@ -958,6 +958,16 @@ p {
   display: none;
 }
 
+.form-status {
+  grid-column: 1;
+  margin: 4px 0 0;
+  padding: 12px 14px;
+  border-left: 4px solid var(--green-dark);
+  background: #eef3ea;
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .contact-band {
   display: flex;
   align-items: center;

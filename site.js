@@ -29,4 +29,65 @@
       ].join("");
     }).join("");
   }
+
+  var contactForms = document.querySelectorAll(".quote-form");
+
+  contactForms.forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      var host = window.location.hostname;
+      var isCloudflare = host === "groundworkstx.com" || host.indexOf("pages.dev") !== -1 || host === "127.0.0.1" || host === "localhost";
+
+      if (!isCloudflare) {
+        return;
+      }
+
+      event.preventDefault();
+
+      var formData = new FormData(form);
+
+      if (formData.get("bot-field")) {
+        return;
+      }
+
+      var labels = {
+        name: "Name",
+        email: "Email",
+        phone: "Phone",
+        service: "Service needed",
+        location: "Property location",
+        "project-size": "Approximate project size",
+        timeframe: "Desired timeframe",
+        access: "Access conditions",
+        hauling: "Hauling or disposal needed",
+        "preferred-contact": "Preferred contact method",
+        details: "Project details"
+      };
+
+      var lines = ["New property inquiry from groundworkstx.com", ""];
+
+      Object.keys(labels).forEach(function (key) {
+        var values = formData.getAll(key).filter(Boolean);
+
+        if (values.length) {
+          lines.push(labels[key] + ": " + values.join(", "));
+        }
+      });
+
+      lines.push("");
+      lines.push("Note: Please attach photos of the property, access points, slopes, drains, standing water, turf, beds, or cleanup area if available.");
+
+      var subject = encodeURIComponent("Groundworks property inquiry");
+      var body = encodeURIComponent(lines.join("\n"));
+      var status = form.querySelector(".form-status");
+
+      if (!status) {
+        status = document.createElement("p");
+        status.className = "form-status";
+        form.appendChild(status);
+      }
+
+      status.textContent = "Your email app should open with these project details. You can also call or text photos to (512) 745-4602.";
+      window.location.href = "mailto:contact@groundworkstx.com?subject=" + subject + "&body=" + body;
+    });
+  });
 }());
