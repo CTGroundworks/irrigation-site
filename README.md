@@ -2,6 +2,6 @@
 
 Static website for Central Texas Groundworks & Consulting LLC.
 
-Positioning: landscape, groundworks, drainage, irrigation-review, site-assessment, and property-improvement services for Central Texas.
+Positioning: owner-operated landscape, groundworks, drainage-observation, site-assessment, sod, planting, cleanup, light site-preparation, and property-improvement services for Central Texas.
 
-Hosted on Netlify from the `main` branch of `CTGroundworks/irrigation-site`.
+Originally hosted on Netlify from the `main` branch of `CTGroundworks/irrigation-site`; current production migration is moving toward Cloudflare Pages.

@@ -350,8 +350,8 @@ p {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -372,8 +372,9 @@ p {
 .service-card {
   display: grid;
   place-items: center;
-  min-height: 122px;
-  padding: 18px 14px;
+  align-content: start;
+  min-height: 190px;
+  padding: 20px 16px;
   text-align: center;
 }
 
@@ -385,7 +386,10 @@ p {
 }
 
 .service-card p {
-  display: none;
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.38;
 }
 
 .service-icon {
@@ -437,24 +441,6 @@ p {
   height: 10px;
   border-bottom: 3px solid currentColor;
   border-radius: 50%;
-}
-
-.service-irrigation::before {
-  left: 24px;
-  top: 16px;
-  width: 6px;
-  height: 24px;
-  background: currentColor;
-}
-
-.service-irrigation::after {
-  left: 4px;
-  top: 4px;
-  width: 46px;
-  height: 28px;
-  border-top: 3px dotted currentColor;
-  border-left: 3px dotted transparent;
-  border-right: 3px dotted transparent;
 }
 
 .service-sod::before {
@@ -517,6 +503,31 @@ p {
 
 .secondary-service {
   background: #f8f8f3;
+}
+
+.scope-section {
+  background: #eef3ea;
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.scope-grid article {
+  min-height: 180px;
+  padding: 22px;
+  border: 1px solid rgba(13, 49, 88, 0.14);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 8px 18px rgba(13, 49, 88, 0.08);
+}
+
+.scope-grid h3 {
+  font-size: 1.02rem;
 }
 
 .conditions {
@@ -839,8 +850,8 @@ p {
 
 .quote-form {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px 14px;
+  grid-template-columns: 1fr;
+  gap: 9px;
   padding: clamp(18px, 3vw, 32px);
   border-radius: 0;
   background: var(--white);
@@ -871,17 +882,75 @@ p {
   resize: vertical;
 }
 
+.form-fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 4px 0;
+  padding: 14px;
+  border: 1px solid #cbd0ca;
+  border-radius: 4px;
+}
+
+.form-fieldset legend {
+  padding: 0 6px;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.checkbox-list,
+.radio-list {
+  display: grid;
+  gap: 8px;
+}
+
+.checkbox-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.radio-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.checkbox-list label,
+.radio-list label,
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.checkbox-list input,
+.radio-list input,
+.consent-label input {
+  width: auto;
+  min-height: 0;
+  margin-top: 3px;
+}
+
 .quote-form label[for="service"],
 .quote-form #service,
 .quote-form label[for="location"],
 .quote-form #location,
+.quote-form label[for="project-size"],
+.quote-form #project-size,
+.quote-form label[for="timeframe"],
+.quote-form #timeframe,
+.quote-form label[for="hauling"],
+.quote-form #hauling,
+.quote-form .form-fieldset,
+.quote-form .consent-label,
 .quote-form label[for="details"],
 .quote-form #details {
-  grid-column: span 3;
+  grid-column: 1;
 }
 
 .quote-form .button {
-  grid-column: 3;
+  grid-column: 1;
   align-self: end;
 }
 
@@ -967,7 +1036,8 @@ p {
 
 @media (max-width: 1120px) {
   .service-grid,
-  .process-grid {
+  .process-grid,
+  .scope-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1106,7 +1176,13 @@ p {
   .process-grid,
   .condition-grid,
   .gallery-grid,
+  .scope-grid,
   .service-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-list,
+  .radio-list {
     grid-template-columns: 1fr;
   }
 

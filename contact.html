@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Request a quote from Central Texas Groundworks & Consulting LLC for landscape planning, drainage, site assessment, sod, planting, cleanup, water-management guidance, or pressure washing.">
+  <meta name="description" content="Request a property review or quote from Central Texas Groundworks & Consulting LLC for landscape evaluations, drainage observations, sod, planting, cleanup, light site preparation, or pressure washing.">
   <meta property="og:title" content="Request a Quote | Central Texas Groundworks & Consulting">
   <meta property="og:description" content="Tell us about your Central Texas property and the problem you are trying to solve.">
   <title>Request a Quote | Central Texas Groundworks & Consulting</title>
@@ -27,8 +27,8 @@
   <main id="main">
     <section class="page-hero">
       <p class="eyebrow">Contact</p>
-      <h1>Request a Quote</h1>
-      <p>Tell us about your property, your goals, and the problems you are trying to solve. We will review the information and follow up about the next step.</p>
+      <h1>Tell Us About Your Property</h1>
+      <p>Share what is happening, what you want to improve, and any access or timing details that could affect the work.</p>
     </section>
     <section class="quote-section standalone">
       <div class="quote-copy">
@@ -37,6 +37,7 @@
         <p><strong>Email:</strong> <a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p>
         <p><strong>Based in:</strong> Leander, Texas</p>
         <p><strong>Service area:</strong> Leander, Cedar Park, Liberty Hill, Georgetown, Lago Vista, and surrounding Central Texas communities.</p>
+        <p><strong>Fastest next step:</strong> Call or text photos to <a href="tel:+15127454602">(512) 745-4602</a>.</p>
       </div>
       <form class="quote-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
         <input type="hidden" name="form-name" value="contact">
@@ -46,30 +47,83 @@
         <label for="email">Email</label>
         <input id="email" name="email" type="email" autocomplete="email" required>
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
         <label for="service">Service Needed</label>
         <select id="service" name="service" required>
           <option value="">Select a service</option>
-          <option>Landscape Planning & Property Evaluation</option>
-          <option>Drainage & Runoff Assessment</option>
-          <option>Irrigation Review</option>
+          <option>Property & Landscape Evaluation</option>
+          <option>Drainage or Runoff Concern</option>
           <option>Sod Installation & Lawn Renovation</option>
-          <option>Plant & Landscape-Bed Installation</option>
-          <option>Property Cleanup & Site Preparation</option>
-          <option>Water-Management Guidance</option>
+          <option>Planting or Landscape-Bed Improvement</option>
+          <option>Water, Soil, or Slope Concern</option>
+          <option>Property Cleanup</option>
+          <option>Light Site Preparation</option>
           <option>Pressure Washing</option>
+          <option>Multiple Property Concerns</option>
+          <option>Not Sure Yet</option>
           <option>Other</option>
         </select>
         <label for="location">Property Location</label>
-        <input id="location" name="location" type="text" autocomplete="address-level2" required>
+        <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="City, neighborhood, or nearest major cross street" required>
+        <label for="project-size">Approximate Project Size</label>
+        <select id="project-size" name="project-size">
+          <option value="">Select if known</option>
+          <option>Small area under 500 square feet</option>
+          <option>500-1,500 square feet</option>
+          <option>1,500-5,000 square feet</option>
+          <option>More than 5,000 square feet</option>
+          <option>Not sure</option>
+          <option>Not based on square footage</option>
+        </select>
+        <label for="timeframe">Desired Timeframe</label>
+        <select id="timeframe" name="timeframe">
+          <option value="">Select if helpful</option>
+          <option>As soon as reasonably available</option>
+          <option>Within 2-4 weeks</option>
+          <option>Within 1-3 months</option>
+          <option>Planning for later</option>
+          <option>Flexible</option>
+          <option>Urgent property concern</option>
+        </select>
+        <fieldset class="form-fieldset">
+          <legend>Access Conditions</legend>
+          <div class="checkbox-list">
+            <label><input type="checkbox" name="access" value="Standard residential gate"> Standard residential gate</label>
+            <label><input type="checkbox" name="access" value="Narrow access"> Narrow access</label>
+            <label><input type="checkbox" name="access" value="Steep slope"> Steep slope</label>
+            <label><input type="checkbox" name="access" value="Fenced backyard"> Fenced backyard</label>
+            <label><input type="checkbox" name="access" value="Limited parking"> Limited parking</label>
+            <label><input type="checkbox" name="access" value="Equipment access may be difficult"> Equipment access may be difficult</label>
+          </div>
+        </fieldset>
+        <label for="hauling">Hauling or Disposal Needed</label>
+        <select id="hauling" name="hauling">
+          <option value="">Select if known</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Possibly</option>
+          <option>Not sure</option>
+        </select>
+        <fieldset class="form-fieldset compact">
+          <legend>Preferred Contact Method</legend>
+          <div class="radio-list">
+            <label><input type="radio" name="preferred-contact" value="Phone"> Phone</label>
+            <label><input type="radio" name="preferred-contact" value="Text"> Text</label>
+            <label><input type="radio" name="preferred-contact" value="Email"> Email</label>
+          </div>
+        </fieldset>
         <label for="details">Project Details</label>
-        <textarea id="details" name="details" rows="5" required></textarea>
-        <button class="button primary full" type="submit">Request a Quote</button>
+        <textarea id="details" name="details" rows="5" placeholder="Describe what is happening, what you would like to improve, and how long the issue has been present." required></textarea>
+        <label class="consent-label">
+          <input name="scope-consent" type="checkbox" required>
+          I understand that submitting this form does not guarantee project acceptance, pricing, availability, or a specific result. Additional information or an onsite review may be required.
+        </label>
+        <button class="button primary full" type="submit">Submit Project Details</button>
       </form>
     </section>
   </main>
   <footer class="site-footer">
-    <div><strong>Central Texas Groundworks & Consulting LLC</strong><p>Landscape, drainage, irrigation-review, site-assessment, and property-improvement services for Central Texas.</p></div>
+    <div><strong>Central Texas Groundworks & Consulting LLC</strong><p>Owner-operated property evaluations, drainage observations, landscape improvements, sod, planting, cleanup, and light site preparation for Central Texas properties.</p></div>
     <div><p><a href="tel:+15127454602">(512) 745-4602</a></p><p><a href="mailto:contact@groundworkstx.com">contact@groundworkstx.com</a></p><p>Leander, Texas</p></div>
   </footer>
   <script src="site.js"></script>
